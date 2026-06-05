@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Yu Liu</title>
+  <meta name="description" content="Yu Liu's academic personal website for data visualization, design informatics, and personal visualization research.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="Yu Liu home">
+      <img src="assets/branding/logo-kingfisher.png" alt="" class="brand-logo">
+      <span>Yu Liu</span>
+    </a>
+    <nav class="site-nav" aria-label="Primary navigation">
+      <a href="#about">About</a>
+      <a href="#publications">Publications</a>
+      <a href="#projects">Projects</a>
+      <a href="#blog">Blog</a>
+      <a href="#misc">Misc</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero" aria-label="Watercolor iris landscape">
+      <img src="assets/backgrounds/hero-iris-watercolor.png" alt="Watercolor irises emerging from pale blue water.">
+    </section>
+
+    <section class="quote-band" aria-label="Quote">
+      <blockquote id="profile-quote"></blockquote>
+      <img src="assets/branding/divider-chi-gradient.svg" alt="" class="chi-divider">
+    </section>
+
+    <section class="about-card shell" id="about" aria-labelledby="about-title">
+      <aside class="profile-panel">
+        <img id="profile-avatar" src="assets/avatar.jpg" alt="Portrait of Yu Liu" class="avatar">
+        <ul class="contact-list" id="contact-list"></ul>
+      </aside>
+      <div class="about-copy">
+        <h1 id="about-title"></h1>
+        <div id="profile-intro" class="intro-copy"></div>
+        <div class="tag-row" aria-label="Research interests">
+          <strong>Research interests:</strong>
+          <div id="research-tags" class="tags"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-section shell" id="publications" aria-labelledby="publications-title">
+      <div class="section-heading">
+        <span class="section-mark">♡</span>
+        <h2 id="publications-title">Selected Publications</h2>
+      </div>
+      <div id="publication-list" class="publication-list"></div>
+    </section>
+
+    <section class="content-section shell" id="projects" aria-labelledby="projects-title">
+      <div class="section-heading">
+        <span class="section-mark">◇</span>
+        <h2 id="projects-title">Projects</h2>
+      </div>
+      <div id="project-list" class="project-list"></div>
+    </section>
+
+    <div class="lower-grid shell">
+      <section class="content-section compact-section" id="blog" aria-labelledby="blog-title">
+        <div class="section-heading">
+          <span class="section-mark">✦</span>
+          <h2 id="blog-title">Blog Posts</h2>
+        </div>
+        <div id="blog-list" class="blog-list"></div>
+        <a href="blog/index.html" class="view-link">View all posts <span aria-hidden="true">→</span></a>
+      </section>
+
+      <section class="content-section compact-section" id="misc" aria-labelledby="misc-title">
+        <div class="section-heading">
+          <span class="section-mark">✧</span>
+          <h2 id="misc-title">Fun Facts About Me</h2>
+        </div>
+        <div id="misc-list" class="misc-list"></div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="copyright-year">2026</span> Yu Liu. All rights reserved.</p>
+  </footer>
+
+  <dialog id="bibtex-modal" class="bibtex-modal">
+    <form method="dialog">
+      <div class="modal-heading">
+        <h2>BibTeX</h2>
+        <button value="close" class="icon-button" aria-label="Close">×</button>
+      </div>
+      <pre id="bibtex-content"></pre>
+      <button type="button" id="copy-bibtex" class="text-button">Copy BibTeX</button>
+    </form>
+  </dialog>
+
+  <script src="data.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

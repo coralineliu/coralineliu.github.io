@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 80" role="img" aria-label="decorative divider">
+  <defs>
+    <linearGradient id="lineGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#9BBDE8" stop-opacity="0"/>
+      <stop offset="22%" stop-color="#8FCBC8" stop-opacity="0.8"/>
+      <stop offset="50%" stop-color="#6EA7D8" stop-opacity="0.9"/>
+      <stop offset="78%" stop-color="#9B86D9" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#9B86D9" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="starGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#7FC8C4"/>
+      <stop offset="52%" stop-color="#6EA7D8"/>
+      <stop offset="100%" stop-color="#A18BDD"/>
+    </linearGradient>
+  </defs>
+  <line x1="120" y1="40" x2="735" y2="40" stroke="url(#lineGrad)" stroke-width="3" stroke-linecap="round"/>
+  <line x1="865" y1="40" x2="1480" y2="40" stroke="url(#lineGrad)" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="755" cy="40" r="8" fill="#8FBBDD"/>
+  <circle cx="845" cy="40" r="8" fill="#8FCBC8"/>
+  <path d="M800 9 C807 30 810 33 831 40 C810 47 807 50 800 71 C793 50 790 47 769 40 C790 33 793 30 800 9 Z"
+        fill="url(#starGrad)" opacity="0.95"/>
+</svg>
