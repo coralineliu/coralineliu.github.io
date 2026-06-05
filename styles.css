@@ -68,8 +68,8 @@ img {
 }
 
 .brand-logo {
-  width: 54px;
-  height: 54px;
+  width: 58px;
+  height: 58px;
   object-fit: contain;
 }
 
@@ -96,8 +96,9 @@ img {
 }
 
 .quote-band {
-  max-width: 980px;
-  margin: 18px auto 24px;
+  width: min(1280px, calc(100% - 64px));
+  max-width: none;
+  margin: 14px auto 22px;
   padding: 0 24px;
   text-align: center;
 }
@@ -106,15 +107,17 @@ img {
   position: relative;
   margin: 0;
   color: #44509c;
-  font-size: 22px;
+  font-size: 18px;
   font-style: italic;
   font-weight: 700;
+  line-height: 1.25;
+  white-space: nowrap;
 }
 
 .quote-band blockquote::before,
 .quote-band blockquote::after {
   color: rgba(68, 80, 156, 0.55);
-  font-size: 32px;
+  font-size: 26px;
   line-height: 0;
 }
 
@@ -129,9 +132,10 @@ img {
 }
 
 .chi-divider {
-  width: 340px;
-  margin: 18px auto 0;
-  opacity: 0.92;
+  width: min(760px, 68vw);
+  height: auto;
+  margin: 12px auto 0;
+  opacity: 1;
 }
 
 .shell {
@@ -149,7 +153,7 @@ img {
 
 .about-card {
   display: grid;
-  grid-template-columns: 310px minmax(0, 1fr);
+  grid-template-columns: 270px minmax(0, 1fr);
   gap: 28px;
   padding: 32px 38px;
 }
@@ -200,8 +204,9 @@ img {
 
 .about-copy h1 {
   margin: 0 0 16px;
-  font-size: 27px;
-  line-height: 1.2;
+  font-size: 22px;
+  line-height: 1.18;
+  white-space: nowrap;
 }
 
 .about-copy h1::before {
@@ -236,19 +241,34 @@ img {
 .tags span {
   padding: 5px 12px;
   border-radius: 7px;
-  color: #24416f;
-  background: #e5f3fb;
   font-family: "Segoe UI", Arial, sans-serif;
   font-size: 13px;
   white-space: nowrap;
 }
 
-.tags span:nth-child(2n) {
-  background: #dff3f2;
+.tags span:nth-child(1) {
+  color: #14665e;
+  background: #dff4ef;
 }
 
-.tags span:nth-child(3n) {
+.tags span:nth-child(2) {
+  color: #155f9b;
+  background: #e2f1fb;
+}
+
+.tags span:nth-child(3) {
+  color: #5a4eaa;
   background: #eeeafd;
+}
+
+.tags span:nth-child(4) {
+  color: #8c4c73;
+  background: #f7e8ef;
+}
+
+.tags span:nth-child(5) {
+  color: #80652a;
+  background: #f8eed7;
 }
 
 .content-section {
@@ -281,6 +301,8 @@ img {
   color: var(--blue);
   font-size: 26px;
   line-height: 1;
+  min-width: 30px;
+  text-align: center;
 }
 
 .publication-row,
@@ -692,7 +714,8 @@ img {
   }
 
   .quote-band blockquote {
-    font-size: 18px;
+    font-size: 16px;
+    white-space: normal;
   }
 
   .shell {
@@ -702,6 +725,10 @@ img {
   .about-card,
   .page-card {
     padding: 24px 18px;
+  }
+
+  .about-copy h1 {
+    white-space: normal;
   }
 
   .project-media,
