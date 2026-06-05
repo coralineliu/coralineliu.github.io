@@ -10,7 +10,7 @@ window.SITE_DATA = {
       "A psychology undergrad from the Department of Psychology, South China Normal University (华南师范大学), I am now embarking on a journey into the field of data visualization by pursuing a Master's degree in Design Informatics, UoE. My academic voyage is a tapestry of rigorous analysis and inventive exploration, aimed at contributing meaningful narratives to the data we decipher.",
       "Seeking to fuse my curiosity with creativity, I am on the quest for pioneering projects to enhance my portfolio and research endeavors that could lay the groundwork for a prospective PhD."
     ],
-    tags: ["Data Physicalization", "Personal Visualization", "Visual Storytelling", "Affective Design", "User Experience"]
+    tags: ["Personal Informatics", "Data Visualization", "Visual Storytelling", "Affective Design", "User Experience"]
   },
 
   publications: [

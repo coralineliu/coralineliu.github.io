@@ -31,8 +31,8 @@
   const publicationList = document.getElementById("publication-list");
   publicationList.innerHTML = data.publications.map((item, index) => {
     const actions = [
-      item.links.paper && `<a href="${item.links.paper}"${externalAttrs(item.links.paper)}><span aria-hidden="true">▧</span> Paper</a>`,
-      item.links.website && `<a href="${item.links.website}"${externalAttrs(item.links.website)}><span aria-hidden="true">◎</span> Website</a>`,
+      item.links.paper && `<a href="${item.links.paper}"${externalAttrs(item.links.paper)}><span aria-hidden="true">📄</span> Paper</a>`,
+      item.links.website && `<a href="${item.links.website}"${externalAttrs(item.links.website)}><span aria-hidden="true">🔗</span> Website</a>`,
       item.links.video && `<a href="${item.links.video}"${externalAttrs(item.links.video)}><span aria-hidden="true">▷</span> Video</a>`,
       `<button class="link-button" data-bibtex="${index}"><span aria-hidden="true">{}</span> BibTeX</button>`
     ].filter(Boolean).join("");
@@ -44,7 +44,7 @@
           <h3>${escapeHtml(item.title)}</h3>
           <p class="authors">${escapeHtml(item.authors)}</p>
           <p>${escapeHtml(item.venue)}</p>
-          ${item.award ? `<p class="award"><span aria-hidden="true">✦</span> ${escapeHtml(item.award)}</p>` : ""}
+          ${item.award ? `<p class="award"><span aria-hidden="true">🏅</span> ${escapeHtml(item.award)}</p>` : ""}
         </div>
         <div class="row-actions">${actions}</div>
       </article>
@@ -65,7 +65,7 @@
         <p>${escapeHtml(item.description)}</p>
       </div>
       <div class="row-actions">
-        <a href="${item.website}"${externalAttrs(item.website)}>Website <span aria-hidden="true">↗</span></a>
+        <a href="${item.website}"${externalAttrs(item.website)}><span aria-hidden="true">🔗</span> Website <span aria-hidden="true">↗</span></a>
       </div>
     </article>
   `).join("");
