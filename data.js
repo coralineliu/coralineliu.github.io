@@ -37,7 +37,7 @@ window.SITE_DATA = {
       title: "Blossoming Cosmos",
       authors: "Yu Liu, Tianqi Zhang",
       date: "2025/04",
-      description: "An immersive stillness experience that guides visitors back to the breath. Listen to the lotus, listen to the body, and let awareness dissolve.",
+      description: "An immersive stillness experience that guides visitors back to the breath. Listen to the body and the inner space.",
       wideImage: "projects/blossoming-cosmos/wide.png",
       squareImage: "projects/blossoming-cosmos/video-thumb.png",
       squareMediaType: "video",
@@ -84,7 +84,7 @@ window.SITE_DATA = {
       title: "River of Vis Conference",
       authors: "Zhenzuo Chen, Yu Liu",
       date: "2021/08",
-      description: "A first data visualization web project about the development of IEEE visualization conferences from 1990 to 2015.",
+      description: "A data visualization web project about the development of IEEE visualization conferences from 1990 to 2015.",
       wideImage: "projects/river-of-vis/wide.jpg",
       squareImage: "projects/river-of-vis/square.jpg",
       website: "https://datavis-conferences.vercel.app/"
