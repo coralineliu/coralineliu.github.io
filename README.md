@@ -12,5 +12,8 @@ Upload the contents of this folder to the root of a GitHub Pages repository. No 
 - `data.js` contains homepage profile, publications, projects, blog cards, and misc facts.
 - `styles.css` controls the watercolor academic visual style.
 - `script.js` renders homepage sections and the BibTeX modal.
-- `blog/` and `projects/` contain static detail pages.
-- `assets/` contains optimized images and referenced media.
+- `publications/` contains publication media, grouped by publication slug.
+- `projects/` contains project folders; each folder keeps its page and local media together.
+- `blog/` contains the blog index and one folder per post.
+- `misc/` contains expandable miscellaneous pages and resources.
+- `assets/` contains only shared site assets such as branding, backgrounds, profile image, and CV.

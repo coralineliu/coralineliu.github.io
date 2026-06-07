@@ -13,33 +13,50 @@
       .replace(/>/g, "&gt;")
       .replace(/"/g, "&quot;");
 
+  const renderSquareMedia = (item) => {
+    const isVideo = item.squareMediaType === "video";
+    const imageSrc = item.squareImage || item.thumbnail || item.wideImage;
+    const media = `
+      <span class="row-square-wrap ${isVideo ? "is-video" : ""}">
+        <img src="${imageSrc}" alt="" class="row-square">
+      </span>
+    `;
+
+    return item.squareLink
+      ? `<a class="row-square-link" href="${item.squareLink}"${externalAttrs(item.squareLink)} aria-label="Open media for ${escapeHtml(item.title)}">${media}</a>`
+      : media;
+  };
+
   const profile = data.profile;
   document.getElementById("profile-quote").textContent = profile.quote;
   document.getElementById("profile-avatar").src = profile.avatar;
   document.getElementById("about-title").textContent = profile.welcome;
   document.getElementById("profile-intro").innerHTML = profile.intro
-    .map((paragraph) => `<p>${escapeHtml(paragraph)}</p>`)
+    .map((paragraph) => `<p>${paragraph}</p>`)
     .join("");
   document.getElementById("research-tags").innerHTML = profile.tags
     .map((tag) => `<span>${escapeHtml(tag)}</span>`)
     .join("");
   document.getElementById("contact-list").innerHTML = [
     `<li><span aria-hidden="true">✉</span><a href="mailto:${profile.email}">${profile.email}</a></li>`,
-    `<li><span aria-hidden="true">in</span><a href="${profile.linkedin}" target="_blank" rel="noreferrer">LinkedIn</a></li>`
-  ].join("");
+    `<li><span aria-hidden="true">in</span><a href="${profile.linkedin}" target="_blank" rel="noreferrer">LinkedIn</a></li>`,
+    profile.cv && `<li><span aria-hidden="true">CV</span><a href="${profile.cv}">CV</a></li>`
+  ].filter(Boolean).join("");
 
   const publicationList = document.getElementById("publication-list");
   publicationList.innerHTML = data.publications.map((item, index) => {
     const actions = [
       item.links.paper && `<a href="${item.links.paper}"${externalAttrs(item.links.paper)}><span aria-hidden="true">📄</span> Paper</a>`,
       item.links.website && `<a href="${item.links.website}"${externalAttrs(item.links.website)}><span aria-hidden="true">🔗</span> Website</a>`,
-      item.links.video && `<a href="${item.links.video}"${externalAttrs(item.links.video)}><span aria-hidden="true">▷</span> Video</a>`,
       `<button class="link-button" data-bibtex="${index}"><span aria-hidden="true">{}</span> BibTeX</button>`
     ].filter(Boolean).join("");
 
     return `
       <article class="publication-row">
-        <img src="${item.thumbnail}" alt="" class="publication-thumb">
+        <div class="row-media">
+          <img src="${item.thumbnail}" alt="" class="row-wide">
+          ${renderSquareMedia(item)}
+        </div>
         <div class="row-copy">
           <h3>${escapeHtml(item.title)}</h3>
           <p class="authors">${escapeHtml(item.authors)}</p>
@@ -54,14 +71,13 @@
   const projectList = document.getElementById("project-list");
   projectList.innerHTML = data.projects.map((item) => `
     <article class="project-row">
-      <div class="project-media">
-        <img src="${item.wideImage}" alt="" class="project-wide">
-        <span class="project-square-wrap ${item.squareMediaType === "video" ? "is-video" : ""}">
-          <img src="${item.squareImage}" alt="" class="project-square">
-        </span>
+      <div class="row-media">
+        <img src="${item.wideImage}" alt="" class="row-wide">
+        ${renderSquareMedia(item)}
       </div>
       <div class="row-copy">
         <h3>${escapeHtml(item.title)} <span>${escapeHtml(item.date)}</span></h3>
+        <p class="authors">${escapeHtml(item.authors || "Yu Liu")}</p>
         <p>${escapeHtml(item.description)}</p>
       </div>
       <div class="row-actions">
