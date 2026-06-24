@@ -271,13 +271,13 @@ img {
 }
 
 .tags span:nth-child(3) {
-  color: #5a4eaa;
-  background: #eeeafd;
+  color: #8c4c73;
+  background: #f7e8ef;
 }
 
 .tags span:nth-child(4) {
-  color: #8c4c73;
-  background: #f7e8ef;
+  color: #5a4eaa;
+  background: #eeeafd;
 }
 
 .tags span:nth-child(5) {
