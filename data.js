@@ -11,7 +11,7 @@ window.SITE_DATA = {
       `With a background in psychology from the <a href="https://psy.scnu.edu.cn/xuekejianshe/" target="_blank" rel="noopener noreferrer">Department of Psychology</a>, South China Normal University (华南师范大学), I recently completed my MSc in <a href="https://www.designinformatics.org/" target="_blank" rel="noopener noreferrer">Design Informatics</a> at the University of Edinburgh. My research interest lies in personal informatics for wellbeing, exploring how people make sense of data about their bodies, emotions, routines, and everyday lives through visual and interactive technologies.`,
       `I am interested in designing technologies that move beyond tracking and dashboards, toward more caring, situated, and human-centered ways of making sense of lived experience. Through research and design practice, I hope to create tools that help people notice patterns, understand themselves, and turn reflection into gentle, actionable change. I am now looking for PhD opportunities where I can continue developing this line of work.`
     ],
-    tags: ["Personal Informatics", "Data Visualization", "Visual Storytelling", "Affective Design", "User Experience"]
+    tags: ["Personal Informatics", "Data Visualization", "Affective Design", "Visual Storytelling", "User Experience"]
 },
 
   publications: [
@@ -50,7 +50,7 @@ window.SITE_DATA = {
       date: "2024/09",
       description: "A playful dashboard to explore episode data and fan-favorite moments across the multiverse.",
       wideImage: "projects/rick-and-morty/wide.jpg",
-      squareImage: "projects/rick-and-morty/",
+      squareImage: "projects/rick-and-morty/square.jpg",
       website: "https://r1ck-and-m0rty.vercel.app/"
     },
     {
