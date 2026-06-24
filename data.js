@@ -50,7 +50,7 @@ window.SITE_DATA = {
       date: "2024/09",
       description: "A playful dashboard to explore episode data and fan-favorite moments across the multiverse.",
       wideImage: "projects/rick-and-morty/wide.jpg",
-      squareImage: "projects/rick-and-morty/square.jpg",
+      squareImage: "projects/rick-and-morty/",
       website: "https://r1ck-and-m0rty.vercel.app/"
     },
     {
@@ -59,7 +59,7 @@ window.SITE_DATA = {
       date: "2024",
       description: "A visual diary capturing daily mood trends and reflections over time.",
       wideImage: "projects/data-diary-of-mood/wide.jpg",
-      squareImage: "projects/data-diary-of-mood/square.jpg",
+      squareImage: "projects/data-diary-of-mood/square.png",
       website: "projects/data-diary-of-mood/"
     },
     {
