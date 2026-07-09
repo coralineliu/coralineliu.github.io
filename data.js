@@ -93,22 +93,28 @@ window.SITE_DATA = {
 
   blog: [
     {
+      title: "微斯人｜创刊寄语",
+      date: "Nov 14, 2024",
+      description: "The opening note for VisRoad, a small visualization road built from shared curiosity, resources, and visual stories.",
+      link: "blog/visroad-preface/"
+    }, 
+    {
       title: "本科毕业啦",
-      date: "Jun 03, 2024",
+      date: "Jun 03, 2022",
       thumbnail: "blog/graduation/cover.jpg",
       link: "blog/graduation/",
       description: "Reflections and selected slides from my undergraduate thesis on future time perspective and bedtime procrastination."
     },
     {
       title: "River of Vis Conference 的诞生",
-      date: "Jun 03, 2024",
+      date: "Sep 01, 2021",
       thumbnail: "blog/river-of-vis/cover.jpg",
       link: "blog/river-of-vis/",
       description: "A project memoir about learning front-end visualization while reviving a summer-school idea."
     },
     {
       title: "留学申请不完全指南",
-      date: "Jun 03, 2024",
+      date: "May 01, 2021",
       thumbnail: "blog/study-abroad-guide/cover.jpg",
       link: "blog/study-abroad-guide/",
       description: "Notes on graduate-school applications, research fit, materials, and communication."
