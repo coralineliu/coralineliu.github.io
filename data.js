@@ -126,6 +126,11 @@ window.SITE_DATA = {
     icon: "🎵",
     description: "Mostly R&B, pop, and indie electronic. Smooth grooves, catchy hooks, and a little swagger."
   },
+{
+  title: "Stand-up Comedy",
+  icon: "🎤",
+  description: "I enjoy stand-up comedy that turns culture, identity, relationships, and awkward everyday moments into sharp storytelling — especially Trevor Noah, Daniel Sloss, and Jimmy O. Yang."
+},
   {
     title: "Book List",
     icon: "📚",
