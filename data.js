@@ -136,7 +136,7 @@ window.SITE_DATA = {
 {
   title: "Stand-up Comedy",
   icon: "🎤",
-  description: "I enjoy stand-up comedy that turns culture, identity, relationships, and awkward everyday moments into sharp storytelling — especially Trevor Noah, Daniel Sloss, and Jimmy O. Yang."
+  description: "I enjoy stand-up comedy that turns culture, identity, relationships, and awkward everyday moments into sharp storytelling — especially Trevor Noah, Daniel Sloss, and Hannah Gadsby."
 },
   {
     title: "Book List",
