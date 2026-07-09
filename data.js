@@ -95,6 +95,7 @@ window.SITE_DATA = {
     {
       title: "微斯人｜创刊寄语",
       date: "Nov 14, 2024",
+      thumbnail: "blog/visroad-preface/cover.jpg",
       description: "The opening note for VisRoad, a small visualization road built from shared curiosity, resources, and visual stories.",
       link: "blog/visroad-preface/"
     }, 
