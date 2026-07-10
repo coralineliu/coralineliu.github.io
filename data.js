@@ -33,18 +33,15 @@ window.SITE_DATA = {
     {
       title: "DiagramLens: Faceted Multimodal Retrieval for Diagrammatic Research Figures",
       authors: "Xinyue Chen, Yu Liu, Chiteng Ma, Yuchu Luo, Xiaoru Yuan",
-      venue: "Poster / Extended Abstract",
+      venue: "ChinaVis 2026 Poster",
       award: "",
       thumbnail: "publications/diagramlens/diagramlens-cover.png",
       squareImage: "publications/diagramlens/diagramlens-cover.png",
       squareMediaType: "image",
-      squareLink: "publications/diagramlens/diagramlens-poster.pdf",
       links: {
         poster: "publications/diagramlens/diagramlens-poster.pdf"
-      },
-      bibtex: ""
+      }
     }
-    
   ],
 
   projects: [
