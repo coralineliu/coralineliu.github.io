@@ -36,7 +36,7 @@ window.SITE_DATA = {
       venue: "ChinaVis 2026 Poster",
       award: "",
       thumbnail: "publications/diagramlens/diagramlens-cover.png",
-      squareImage: "publications/diagramlens/diagramlens-cover.png",
+      squareImage: "publications/diagramlens/diagramlens-thumb.png",
       squareMediaType: "image",
       links: {
         poster: "publications/diagramlens/diagramlens-poster.pdf"
