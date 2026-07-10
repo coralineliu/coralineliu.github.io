@@ -35,8 +35,8 @@ window.SITE_DATA = {
       authors: "Xinyue Chen, Yu Liu, Chiteng Ma, Yuchu Luo, Xiaoru Yuan",
       venue: "Poster / Extended Abstract",
       award: "",
-      thumbnail: "publications/diagramlens/diagramlens-cover.jpg",
-      squareImage: "publications/diagramlens/diagramlens-cover.jpg",
+      thumbnail: "publications/diagramlens/diagramlens-cover.png",
+      squareImage: "publications/diagramlens/diagramlens-cover.png",
       squareMediaType: "image",
       squareLink: "publications/diagramlens/diagramlens-poster.pdf",
       links: {
