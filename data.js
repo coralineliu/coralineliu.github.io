@@ -29,7 +29,22 @@ window.SITE_DATA = {
         website: "https://flawviz.github.io/"
       },
       bibtex: "@ARTICLE{10670488,\n  author={Lan, Xingyu and Liu, Yu},\n  journal={IEEE Transactions on Visualization and Computer Graphics},\n  title={\"I Came Across a Junk\": Understanding Design Flaws of Data Visualization from the Public's Perspective},\n  year={2025},\n  volume={31},\n  number={1},\n  pages={393-403},\n  keywords={Data visualization;Taxonomy;Fault diagnosis;Visualization;Fake news;Distortion;Systematics;Visualization Design;General Public;Chart Junk;Deceptive Visualization;Misinformation;User Experience},\n  doi={10.1109/TVCG.2024.3456341}\n}"
+    },
+    {
+      title: "DiagramLens: Faceted Multimodal Retrieval for Diagrammatic Research Figures",
+      authors: "Xinyue Chen, Yu Liu, Chiteng Ma, Yuchu Luo, Xiaoru Yuan",
+      venue: "Poster / Extended Abstract",
+      award: "",
+      thumbnail: "publications/diagramlens/diagramlens-cover.jpg",
+      squareImage: "publications/diagramlens/diagramlens-cover.jpg",
+      squareMediaType: "image",
+      squareLink: "publications/diagramlens/diagramlens-poster.pdf",
+      links: {
+        poster: "publications/diagramlens/diagramlens-poster.pdf"
+      },
+      bibtex: ""
     }
+    
   ],
 
   projects: [
