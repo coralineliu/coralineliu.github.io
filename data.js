@@ -38,6 +38,7 @@ window.SITE_DATA = {
       authors: "Yu Liu, Tianqi Zhang",
       date: "2025/04",
       description: "An immersive stillness experience that guides visitors back to the breath. Listen to the lotus, listen to the body, and let awareness dissolve.",
+      description: "An immersive stillness experience that guides visitors back to the breath. Listen to the body, and the inner space.",
       wideImage: "projects/blossoming-cosmos/wide.png",
       squareImage: "projects/blossoming-cosmos/video-thumb.png",
       squareMediaType: "video",
