@@ -45,12 +45,15 @@
 
   const publicationList = document.getElementById("publication-list");
   publicationList.innerHTML = data.publications.map((item, index) => {
+    const links = item.links || {};
+  
     const actions = [
-      item.links.paper && `<a href="${item.links.paper}"${externalAttrs(item.links.paper)}><span aria-hidden="true">📄</span> Paper</a>`,
-      item.links.website && `<a href="${item.links.website}"${externalAttrs(item.links.website)}><span aria-hidden="true">🔗</span> Website</a>`,
-      `<button class="link-button" data-bibtex="${index}"><span aria-hidden="true">{}</span> BibTeX</button>`
+      links.paper && `<a href="${links.paper}"${externalAttrs(links.paper)}><span aria-hidden="true">📄</span> Paper</a>`,
+      links.poster && `<a href="${links.poster}"${externalAttrs(links.poster)}><span aria-hidden="true">📄</span> Poster</a>`,
+      links.website && `<a href="${links.website}"${externalAttrs(links.website)}><span aria-hidden="true">🔗</span> Website</a>`,
+      item.bibtex && `<button class="link-button" data-bibtex="${index}"><span aria-hidden="true">{}</span> BibTeX</button>`
     ].filter(Boolean).join("");
-
+  
     return `
       <article class="publication-row">
         <div class="row-media">

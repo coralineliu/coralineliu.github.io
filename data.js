@@ -11,7 +11,7 @@ window.SITE_DATA = {
       `With a background in psychology from the <a href="https://psy.scnu.edu.cn/xuekejianshe/" target="_blank" rel="noopener noreferrer">Department of Psychology</a>, South China Normal University (华南师范大学), I recently completed my MSc in <a href="https://www.designinformatics.org/" target="_blank" rel="noopener noreferrer">Design Informatics</a> at the University of Edinburgh. My research interest lies in personal informatics for wellbeing, exploring how people make sense of data about their bodies, emotions, routines, and everyday lives through visual and interactive technologies.`,
       `I am interested in designing technologies that move beyond tracking and dashboards, toward more caring, situated, and human-centered ways of making sense of lived experience. Through research and design practice, I hope to create tools that help people notice patterns, understand themselves, and turn reflection into gentle, actionable change. I am now looking for PhD opportunities where I can continue developing this line of work.`
     ],
-    tags: ["Personal Informatics", "Data Visualization", "Visual Storytelling", "Affective Design", "User Experience"]
+    tags: ["Personal Informatics", "Data Visualization", "Affective Design", "Visual Storytelling", "User Experience"]
 },
 
   publications: [
@@ -29,6 +29,18 @@ window.SITE_DATA = {
         website: "https://flawviz.github.io/"
       },
       bibtex: "@ARTICLE{10670488,\n  author={Lan, Xingyu and Liu, Yu},\n  journal={IEEE Transactions on Visualization and Computer Graphics},\n  title={\"I Came Across a Junk\": Understanding Design Flaws of Data Visualization from the Public's Perspective},\n  year={2025},\n  volume={31},\n  number={1},\n  pages={393-403},\n  keywords={Data visualization;Taxonomy;Fault diagnosis;Visualization;Fake news;Distortion;Systematics;Visualization Design;General Public;Chart Junk;Deceptive Visualization;Misinformation;User Experience},\n  doi={10.1109/TVCG.2024.3456341}\n}"
+    },
+    {
+      title: "DiagramLens: Faceted Multimodal Retrieval for Diagrammatic Research Figures",
+      authors: "Xinyue Chen, Yu Liu, Chiteng Ma, Yuchu Luo, Xiaoru Yuan",
+      venue: "ChinaVis 2026 Poster",
+      award: "",
+      thumbnail: "publications/diagramlens/diagramlens-cover.png",
+      squareImage: "publications/diagramlens/diagramlens-thumb.png",
+      squareMediaType: "image",
+      links: {
+        poster: "publications/diagramlens/diagramlens-poster.pdf"
+      }
     }
   ],
 
@@ -59,7 +71,7 @@ window.SITE_DATA = {
       date: "2024",
       description: "A visual diary capturing daily mood trends and reflections over time.",
       wideImage: "projects/data-diary-of-mood/wide.jpg",
-      squareImage: "projects/data-diary-of-mood/square.jpg",
+      squareImage: "projects/data-diary-of-mood/square.png",
       website: "projects/data-diary-of-mood/"
     },
     {
@@ -84,7 +96,7 @@ window.SITE_DATA = {
       title: "River of Vis Conference",
       authors: "Zhenzuo Chen, Yu Liu",
       date: "2021/08",
-      description: "A first data visualization web project about the development of IEEE visualization conferences from 1990 to 2015.",
+      description: "A data visualization web project about the development of IEEE visualization conferences from 1990 to 2015.",
       wideImage: "projects/river-of-vis/wide.jpg",
       squareImage: "projects/river-of-vis/square.jpg",
       website: "https://datavis-conferences.vercel.app/"
@@ -93,22 +105,29 @@ window.SITE_DATA = {
 
   blog: [
     {
+      title: "微斯人｜创刊寄语",
+      date: "Nov 14, 2024",
+      thumbnail: "blog/visroad-preface/cover.jpg",
+      description: "The opening note for VisRoad, a small visualization road built from shared curiosity, resources, and visual stories.",
+      link: "blog/visroad-preface/"
+    }, 
+    {
       title: "本科毕业啦",
-      date: "Jun 03, 2024",
+      date: "Jun 03, 2022",
       thumbnail: "blog/graduation/cover.jpg",
       link: "blog/graduation/",
       description: "Reflections and selected slides from my undergraduate thesis on future time perspective and bedtime procrastination."
     },
     {
       title: "River of Vis Conference 的诞生",
-      date: "Jun 03, 2024",
+      date: "Sep 01, 2021",
       thumbnail: "blog/river-of-vis/cover.jpg",
       link: "blog/river-of-vis/",
       description: "A project memoir about learning front-end visualization while reviving a summer-school idea."
     },
     {
       title: "留学申请不完全指南",
-      date: "Jun 03, 2024",
+      date: "May 01, 2021",
       thumbnail: "blog/study-abroad-guide/cover.jpg",
       link: "blog/study-abroad-guide/",
       description: "Notes on graduate-school applications, research fit, materials, and communication."
@@ -126,6 +145,11 @@ window.SITE_DATA = {
     icon: "🎵",
     description: "Mostly R&B, pop, and indie electronic. Smooth grooves, catchy hooks, and a little swagger."
   },
+{
+  title: "Stand-up Comedy",
+  icon: "🎤",
+  description: "I enjoy stand-up comedy that turns culture, identity, relationships, and awkward everyday moments into sharp storytelling — especially Trevor Noah, Daniel Sloss, and Hannah Gadsby."
+},
   {
     title: "Book List",
     icon: "📚",
