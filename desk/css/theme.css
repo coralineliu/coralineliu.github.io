@@ -1,0 +1,43 @@
+/* Desk-only appearance, matching the untouched Academic View palette. */
+body,.desk-page{background:linear-gradient(180deg,#fbfdff,#f5fbff 42%,#fbfdff);font-family:"Palatino Linotype","Book Antiqua",Georgia,serif}
+#desk-stage{background:linear-gradient(180deg,#fbfdff,#f5fbff 65%,#f2f8fc)}
+#object-map{z-index:2}
+.desk-heading{top:48px;left:52px;gap:18px;padding:12px 26px 12px 13px;border:1px solid #ffffffa8;border-radius:25px;background:#ffffff48;box-shadow:0 9px 24px #2c538018;backdrop-filter:blur(8px)}
+.desk-heading img{width:78px;height:83px;object-fit:contain;mix-blend-mode:normal;filter:drop-shadow(0 3px 3px #13275a15)}
+.desk-heading h1{font-size:43px;line-height:1.1;letter-spacing:-1px;color:var(--ink)}
+.desk-heading h1 span{color:var(--ink-soft);font-size:13px;margin-top:12px;letter-spacing:6px}
+#portrait{border-radius:50%;overflow:hidden}
+.portrait{border-radius:50%;object-fit:cover;object-position:center}
+.portrait,#preview-content .preview-avatar{filter:saturate(.74) contrast(.96) brightness(1.025)}
+#preview-content .preview-avatar{width:105px;height:105px;border-radius:50%;object-position:center}
+.desk-quote{height:100%;display:flex;align-items:center;padding:10px 15px;margin:0;font:italic 18px/1.5 "Palatino Linotype",Georgia,serif;color:#44509c;text-align:center;mix-blend-mode:multiply}
+.quote-preview{margin:8px 0 28px;color:#44509c;font:italic 25px/1.6 "Palatino Linotype",Georgia,serif}
+#research-notes{position:absolute;inset:0;pointer-events:none;z-index:4}
+.research-note{position:absolute;width:122px;height:62px;padding:9px 10px 12px;border:0;border-radius:0 1px 13px 1px;box-shadow:1px 4px 5px #2c53801c,0 1px 1px #ffffff99 inset;cursor:pointer;text-align:left;font:14.5px/1.35 "Segoe UI",Arial,sans-serif;pointer-events:auto;background-image:linear-gradient(180deg,#ffffff05 0%,#ffffff00 75%,#ffffff35 100%);transition:box-shadow .2s,translate .2s}
+.research-note::before{content:'';position:absolute;top:-7px;left:36px;width:46px;height:14px;background:repeating-linear-gradient(90deg,#ffffff40 0 2px,#f7fafb55 2px 4px);box-shadow:0 1px 1px #7390a318;transform:rotate(-3deg)}
+.research-note::after{content:'';position:absolute;bottom:0;right:0;width:13px;height:13px;background:linear-gradient(135deg,#c4d0d450,#ffffffc9 65%);clip-path:polygon(100% 0,0 100%,0 0);filter:drop-shadow(-1px -1px 1px #38547820)}
+.research-note:hover,.research-note:focus-visible{translate:0 -2px;box-shadow:1px 8px 12px #2c538025;outline:2px solid #ffffffba;outline-offset:3px}
+.note-1{left:76px;top:183px;transform:rotate(-3deg)}
+.note-2{left:229px;top:181px;transform:rotate(2deg)}
+.note-3{left:75px;top:261px;transform:rotate(1.5deg)}
+.note-4{left:231px;top:261px;transform:rotate(-2deg)}
+.note-5{left:281px;top:344px;transform:rotate(3deg)}
+.note-1,#preview-content .tags span:nth-child(1){color:var(--interest-1-ink);background-color:var(--interest-1-paper)}
+.note-2,#preview-content .tags span:nth-child(2){color:var(--interest-2-ink);background-color:var(--interest-2-paper)}
+.note-3,#preview-content .tags span:nth-child(3){color:var(--interest-3-ink);background-color:var(--interest-3-paper)}
+.note-4,#preview-content .tags span:nth-child(4){color:var(--interest-4-ink);background-color:var(--interest-4-paper)}
+.note-5,#preview-content .tags span:nth-child(5){color:var(--interest-5-ink);background-color:var(--interest-5-paper)}
+.object-label{color:var(--ink-soft);background:#ffffffc9;border-color:var(--line)}
+.object-label:hover,.object-label.active{background:#fff;box-shadow:0 3px 15px #0b66a31f}
+dialog{color:var(--ink);background:#fbfdfff2;border-color:#fff;box-shadow:var(--shadow)}
+#preview-content p{color:var(--ink-soft)}
+#preview-content a{color:#174f9b}
+.open-section{background:var(--blue)}
+.mobile-object{background:var(--paper-strong);color:var(--ink);box-shadow:var(--shadow)}
+.phone-page{padding:26px 18px;background:#fffdf3}
+.phone-page h3{font:600 27px/1.2 "Segoe UI",Arial,sans-serif;margin:13px 0 17px;color:var(--ink)}
+.phone-page .phone-date{font:16px/1.3 "Segoe UI",Arial,sans-serif;letter-spacing:1px;margin:0 0 18px;color:var(--ink-soft)}
+.phone-page svg{display:block;width:100%;height:275px;overflow:hidden}
+.book-spine{height:100%;display:flex;align-items:center;justify-content:center;padding:0 10px;font-size:21px;line-height:1;letter-spacing:.2px;white-space:nowrap;color:var(--ink);text-shadow:none;mix-blend-mode:multiply}
+.book-spine.light{color:var(--interest-4-ink)}
+@media(max-width:700px){.desk-heading{padding:10px 20px;gap:14px}.desk-heading img{width:91px;height:94px}.desk-heading h1{font-size:48px}.research-note{pointer-events:none}}

@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Yu Liu’s interactive desk: research, projects, writing, books and life.">
+  <title>Yu’s Desk | Yu Liu</title>
+  <link rel="preload" as="image" href="../assets/desk/studio-v6.webp">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/theme.css">
+  <script src="../data.js" defer></script>
+  <script type="module" src="js/main.js"></script>
+  <script src="../view-switcher.js" defer></script>
+</head>
+<body class="desk-page">
+  <main id="desk-stage" aria-label="Yu’s interactive desk">
+    <div id="desk-world">
+      <img class="room" src="../assets/desk/studio-v6.webp" alt="A bright sunlit desk with irises, a round portrait frame, a laptop, books, a quotation card and pale blue headphones." width="1672" height="941" draggable="false">
+      <header class="desk-heading"><a href="../index.html" aria-label="Yu Liu home"><img src="../assets/branding/logo-kingfisher.png" alt="" draggable="false"></a><h1>Yu’s Desk<span>刘予</span></h1></header>
+      <aside id="research-notes" aria-label="Research interests"></aside>
+      <div id="surfaces" aria-hidden="true"></div>
+      <svg id="object-map" viewBox="0 0 1672 941" xmlns="http://www.w3.org/2000/svg" aria-label="Explore objects on the desk"></svg>
+      <div id="object-labels"></div>
+    </div>
+  </main>
+  <section id="mobile-objects" aria-label="Explore the desk"></section>
+  <dialog id="preview" aria-labelledby="preview-title">
+    <button id="close-preview" aria-label="Close preview">×</button>
+    <h2 id="preview-title"></h2>
+    <div id="preview-content"></div>
+    <a id="open-section" class="open-section"></a>
+  </dialog>
+</body>
+</html>

@@ -1,0 +1,23 @@
+/* Desk-only values matched to the original Academic View styles.css. */
+:root {
+  --ink: #13275a;
+  --ink-soft: #3d5d92;
+  --blue: #0b66a3;
+  --teal: #0c8b91;
+  --lavender: #8178c9;
+  --peach: #d99b76;
+  --paper: rgba(255, 255, 255, 0.86);
+  --paper-strong: rgba(255, 255, 255, 0.94);
+  --line: rgba(75, 117, 164, 0.22);
+  --shadow: 0 18px 42px rgba(44, 83, 130, 0.10);
+  --interest-1-ink: #14665e;
+  --interest-1-paper: #dff4ef;
+  --interest-2-ink: #155f9b;
+  --interest-2-paper: #e2f1fb;
+  --interest-3-ink: #8c4c73;
+  --interest-3-paper: #f7e8ef;
+  --interest-4-ink: #5a4eaa;
+  --interest-4-paper: #eeeafd;
+  --interest-5-ink: #80652a;
+  --interest-5-paper: #f8eed7;
+}
