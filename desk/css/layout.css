@@ -8,12 +8,12 @@ button { font: inherit; }
 button, a { -webkit-tap-highlight-color: transparent; }
 button:focus-visible, a:focus-visible { outline: 2px solid var(--lavender); outline-offset: 5px; }
 [hidden] { display: none !important; }
-.desk-page { height: 100svh; overflow: hidden; }
+.desk-page { height: 100dvh; overflow: hidden; }
 #desk-stage { position: absolute; inset: 0; overflow: hidden; perspective: 2200px; cursor: grab; touch-action: none; }
 #desk-stage.dragging { cursor: grabbing; }
 #desk-world {
   position: absolute; width: 1672px; height: 941px; left: 50%; top: 50%;
-  transform: translate(-50%,-50%) scale(var(--fit,1)) rotateX(var(--rx,0deg)) rotateY(var(--ry,0deg));
+  transform: translate(calc(-50% + var(--pan-x,0px)),calc(-50% + var(--pan-y,0px))) scale(var(--fit,1));
   transform-origin: center; will-change: transform; isolation: isolate; user-select: none;
 }
 .room { display: block; width: 100%; height: 100%; pointer-events: none; }
@@ -76,5 +76,5 @@ dialog h2 { font: 31px/1.25 Georgia; margin: 8px 32px 25px 0; }
 
 @media (prefers-reduced-motion:reduce) {
   *, *::before, *::after { transition: none !important; animation: none !important; }
-  #desk-world { transform: translate(-50%,-50%) scale(var(--fit,1)) !important; }
+
 }

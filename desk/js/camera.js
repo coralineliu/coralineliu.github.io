@@ -1,22 +1,56 @@
-// Bounded mouse/drag motion. Content, outlines and labels move together.
+// One cover-scaled camera keeps image, text and hit regions registered.
 export function createCamera(stage, world, dialog) {
-  // Mouse movement follows a small damped angle. A drag adds a bounded offset;
-  // releasing a drag must not activate the object underneath the pointer.
-  const reduced=matchMedia('(prefers-reduced-motion: reduce)'),mobileQuery=matchMedia('(max-width:700px)');
-  let currentX=0,currentY=0,targetX=0,targetY=0,offsetX=0,offsetY=0,frame=0,down=null,wasDrag=false;
-  function layout(){const rect=stage.getBoundingClientRect();world.style.setProperty('--fit',Math.min(rect.width/1672,rect.height/941));}
-  new ResizeObserver(layout).observe(stage);layout();
-  function animate(){currentX+=(targetX-currentX)*.09;currentY+=(targetY-currentY)*.09;world.style.setProperty('--rx',currentX+'deg');world.style.setProperty('--ry',currentY+'deg');if(Math.abs(currentX-targetX)+Math.abs(currentY-targetY)>.003)frame=requestAnimationFrame(animate);else frame=0;}
-  function move(x,y){if(reduced.matches||mobileQuery.matches)return;targetX=Math.max(-1.1,Math.min(1.1,x));targetY=Math.max(-1.8,Math.min(1.8,y));if(!frame)frame=requestAnimationFrame(animate);}
-  stage.addEventListener('pointerdown',e=>{if(e.button!==0||mobileQuery.matches||dialog.open)return;down={x:e.clientX,y:e.clientY,ox:offsetX,oy:offsetY};wasDrag=false;});
+  const reduced = matchMedia('(prefers-reduced-motion: reduce)');
+  const clamp = (value, limit) => Math.max(-limit, Math.min(limit, value));
+  let x=0, y=0, targetX=0, targetY=0, limitX=0, limitY=0, frame=0, down=null, wasDrag=false;
+  function paint() {
+    world.style.setProperty('--pan-x', x+'px');
+    world.style.setProperty('--pan-y', y+'px');
+  }
+  function animate() {
+    x+=(targetX-x)*.12; y+=(targetY-y)*.12; paint();
+    if (Math.abs(targetX-x)+Math.abs(targetY-y)>.1) frame=requestAnimationFrame(animate);
+    else { x=targetX; y=targetY; paint(); frame=0; }
+  }
+  function move(nextX, nextY) {
+    targetX=clamp(nextX,limitX); targetY=clamp(nextY,limitY);
+    if(reduced.matches) { x=targetX; y=targetY; paint(); }
+    else if(!frame) frame=requestAnimationFrame(animate);
+  }
+  function layout() {
+    const {width,height}=stage.getBoundingClientRect();
+    // A small overscan protects the scene edge; no backdrop seams or distortion.
+    const scale=Math.max(width/1672,height/941)*1.015;
+    limitX=Math.max(0,(1672*scale-width)/2-2);
+    limitY=Math.max(0,(941*scale-height)/2-2);
+    world.style.setProperty('--fit',scale);
+    x=clamp(x,limitX); y=clamp(y,limitY); paint(); move(x,y);
+  }
+  new ResizeObserver(layout).observe(stage); layout();
+  stage.addEventListener('pointerdown',e=>{
+    if(e.button!==0||dialog.open)return;
+    down={x:e.clientX,y:e.clientY,px:x,py:y}; wasDrag=false;
+  });
   stage.addEventListener('pointermove',e=>{
-    if(dialog.open||mobileQuery.matches)return;
-    if(down){const dx=e.clientX-down.x,dy=e.clientY-down.y;if(Math.hypot(dx,dy)>6){wasDrag=true;stage.classList.add('dragging');offsetX=Math.max(-.8,Math.min(.8,down.ox-dy/230));offsetY=Math.max(-1.4,Math.min(1.4,down.oy+dx/230));move(offsetX,offsetY);}}
-    else if(e.pointerType==='mouse'){const r=stage.getBoundingClientRect();move(offsetX+(.5-(e.clientY-r.top)/r.height)*.65,offsetY+((e.clientX-r.left)/r.width-.5)*1.15);}
+    if(dialog.open)return;
+    if(down) {
+      const dx=e.clientX-down.x,dy=e.clientY-down.y;
+      if(Math.hypot(dx,dy)>6) {wasDrag=true;stage.classList.add('dragging');move(down.px+dx,down.py+dy);}
+    } else if(e.pointerType==='mouse'&&!reduced.matches) {
+      const r=stage.getBoundingClientRect();
+      // Reach both ends before the pointer hits the viewport edge.
+      move((.5-(e.clientX-r.left)/r.width)*2.5*limitX,(.5-(e.clientY-r.top)/r.height)*2.5*limitY);
+    }
   });
   window.addEventListener('pointerup',()=>{down=null;stage.classList.remove('dragging');setTimeout(()=>{wasDrag=false;},0);});
   window.addEventListener('pointercancel',()=>{down=null;wasDrag=false;stage.classList.remove('dragging');});
-  stage.addEventListener('pointerleave',()=>{if(!down)move(offsetX,offsetY);});
-  reduced.addEventListener('change',()=>{if(reduced.matches){cancelAnimationFrame(frame);frame=0;currentX=currentY=targetX=targetY=offsetX=offsetY=0;world.style.setProperty('--rx','0deg');world.style.setProperty('--ry','0deg');}});
-  return { get wasDragging() { return wasDrag; } };
+  // Keyboard navigation also brings cropped edge objects into view.
+  stage.addEventListener('focusin',e=>{
+    const r=e.target.getBoundingClientRect(),s=stage.getBoundingClientRect();
+    const dx=r.left<s.left+20?s.left+20-r.left:r.right>s.right-20?s.right-20-r.right:0;
+    const dy=r.top<s.top+20?s.top+20-r.top:r.bottom>s.bottom-20?s.bottom-20-r.bottom:0;
+    move(x+dx,y+dy);
+  });
+  reduced.addEventListener('change',()=>{cancelAnimationFrame(frame);frame=0;x=targetX;y=targetY;paint();});
+  return {get wasDragging(){return wasDrag;}};
 }

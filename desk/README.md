@@ -27,4 +27,4 @@ Serve the site root over HTTP; ES modules and existing-page content requests are
 
 view-entry.js sends desktop home visits to /desk/ and preserves explicit ?view=academic links and section hashes. Screens up to 900px wide, or coarse-pointer devices up to 1100px wide, use Academic View; direct desk links map to the corresponding section. The mode switch is hidden on these screens. The original academic content and styling remain intact; only the entry script was added.
 
-The full desk scales proportionally to the viewport. A blurred room backdrop fills excess space on other aspect ratios without stretching the scene or clipping objects. Mobile material cards have been removed.
+The room uses proportional cover scaling with 1.5% overscan. Excess edges are cropped, with no separate blurred backdrop. Bounded mouse movement or dragging reveals edge objects on unusual aspect ratios; keyboard focus also brings them into view. Image, text and hit regions share the same transform. Reduced-motion mode disables pointer-follow animation but retains direct drag and focus navigation. Mobile material cards have been removed.
