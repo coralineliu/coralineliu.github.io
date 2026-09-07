@@ -1,6 +1,8 @@
 /* Desk-only appearance, matching the untouched Academic View palette. */
 body,.desk-page{background:linear-gradient(180deg,#fbfdff,#f5fbff 42%,#fbfdff);font-family:"Palatino Linotype","Book Antiqua",Georgia,serif}
-#desk-stage{background:linear-gradient(180deg,#fbfdff,#f5fbff 65%,#f2f8fc)}
+#desk-stage{background:#b6d0df}
+/* Extend the room's colors on unusual aspect ratios without cropping objects. */
+#desk-stage::before{content:'';position:absolute;inset:-40px;background:url('../../assets/desk/studio-v6.webp') center/cover no-repeat;filter:blur(28px);opacity:.7;pointer-events:none}
 #object-map{z-index:2}
 .desk-heading{top:48px;left:52px;gap:18px;padding:12px 26px 12px 13px;border:1px solid #ffffffa8;border-radius:25px;background:#ffffff48;box-shadow:0 9px 24px #2c538018;backdrop-filter:blur(8px)}
 .desk-heading img{width:78px;height:83px;object-fit:contain;mix-blend-mode:normal;filter:drop-shadow(0 3px 3px #13275a15)}
@@ -33,11 +35,9 @@ dialog{color:var(--ink);background:#fbfdfff2;border-color:#fff;box-shadow:var(--
 #preview-content p{color:var(--ink-soft)}
 #preview-content a{color:#174f9b}
 .open-section{background:var(--blue)}
-.mobile-object{background:var(--paper-strong);color:var(--ink);box-shadow:var(--shadow)}
 .phone-page{padding:26px 18px;background:#fffdf3}
 .phone-page h3{font:600 27px/1.2 "Segoe UI",Arial,sans-serif;margin:13px 0 17px;color:var(--ink)}
 .phone-page .phone-date{font:16px/1.3 "Segoe UI",Arial,sans-serif;letter-spacing:1px;margin:0 0 18px;color:var(--ink-soft)}
 .phone-page svg{display:block;width:100%;height:275px;overflow:hidden}
 .book-spine{height:100%;display:flex;align-items:center;justify-content:center;padding:0 10px;font-size:21px;line-height:1;letter-spacing:.2px;white-space:nowrap;color:var(--ink);text-shadow:none;mix-blend-mode:multiply}
 .book-spine.light{color:var(--interest-4-ink)}
-@media(max-width:700px){.desk-heading{padding:10px 20px;gap:14px}.desk-heading img{width:91px;height:94px}.desk-heading h1{font-size:48px}.research-note{pointer-events:none}}

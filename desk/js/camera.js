@@ -4,7 +4,7 @@ export function createCamera(stage, world, dialog) {
   // releasing a drag must not activate the object underneath the pointer.
   const reduced=matchMedia('(prefers-reduced-motion: reduce)'),mobileQuery=matchMedia('(max-width:700px)');
   let currentX=0,currentY=0,targetX=0,targetY=0,offsetX=0,offsetY=0,frame=0,down=null,wasDrag=false;
-  function layout(){const rect=stage.getBoundingClientRect();const fit=Math.min(rect.width/1672,(rect.height-(mobileQuery.matches?0:58))/941)*(mobileQuery.matches?1:.995);world.style.setProperty('--fit',fit);}
+  function layout(){const rect=stage.getBoundingClientRect();world.style.setProperty('--fit',Math.min(rect.width/1672,rect.height/941));}
   new ResizeObserver(layout).observe(stage);layout();
   function animate(){currentX+=(targetX-currentX)*.09;currentY+=(targetY-currentY)*.09;world.style.setProperty('--rx',currentX+'deg');world.style.setProperty('--ry',currentY+'deg');if(Math.abs(currentX-targetX)+Math.abs(currentY-targetY)>.003)frame=requestAnimationFrame(animate);else frame=0;}
   function move(x,y){if(reduced.matches||mobileQuery.matches)return;targetX=Math.max(-1.1,Math.min(1.1,x));targetY=Math.max(-1.8,Math.min(1.8,y));if(!frame)frame=requestAnimationFrame(animate);}

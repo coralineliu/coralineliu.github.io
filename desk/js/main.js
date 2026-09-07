@@ -62,15 +62,5 @@ document.getElementById('close-preview').onclick=()=>dialog.close();
 dialog.addEventListener('close',()=>{previewToken++;lastTrigger?.focus({preventScroll:true});});
 dialog.addEventListener('click',e=>{if(e.target===dialog){const r=dialog.getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)dialog.close();}});
 
-const mobile=document.getElementById('mobile-objects');
-objects.forEach(o=>{
-  const button=document.createElement('button');button.className='mobile-object';button.setAttribute('aria-label','Explore '+o.title);button.setAttribute('aria-haspopup','dialog');
-  const [x,y,w,h]=o.crop;
-  const relevant={about:['portrait'],quote:['quote-card'],rick:['laptop-screen'],mood:['phone-screen'],'paper-0':['paper-0'],'paper-1':['paper-1'],blog:['journal-left','journal-right'],books:['book-spine-0','book-spine-1','book-spine-2']}[o.id]||[];
-  const inserts=relevant.map(id=>document.getElementById(id).outerHTML.replace(/ id="[^"]*"/g,'')).join('');
-  button.innerHTML=`<svg viewBox="${x} ${y} ${w} ${h}" aria-hidden="true"><image href="${asset('assets/desk/studio-v6.webp')}" width="1672" height="941"/><foreignObject width="1672" height="941"><div xmlns="http://www.w3.org/1999/xhtml" style="position:relative;width:1672px;height:941px">${inserts}</div></foreignObject></svg><span>${esc(o.title)}</span>`;
-  button.onclick=()=>openPreview(o.id,button);mobile.append(button);
-});
-
 function restore(){const key=location.hash.slice(1),direct=objects.find(o=>o.id===key),matches=direct?[direct]:objects.filter(o=>o.section===key);matches.forEach(o=>document.getElementById('object-'+o.id).classList.add('returned'));setTimeout(()=>document.querySelectorAll('.returned').forEach(e=>e.classList.remove('returned')),2600);}
 restore();window.addEventListener('hashchange',()=>{if(!dialog.open)restore();});
