@@ -21,7 +21,7 @@ body,.desk-page{background:linear-gradient(180deg,#fbfdff,#f5fbff 42%,#fbfdff);f
 .note-2{left:229px;top:181px;transform:rotate(2deg)}
 .note-3{left:75px;top:261px;transform:rotate(1.5deg)}
 .note-4{left:231px;top:261px;transform:rotate(-2deg)}
-.note-5{left:281px;top:344px;transform:rotate(3deg)}
+.note-5{left:251px;top:344px;transform:rotate(1deg);box-shadow:-2px 3px 4px #2c538020,0 1px 1px #ffffff66 inset;background-image:linear-gradient(110deg,#3153760a,#ffffff18)}
 .note-1,#preview-content .tags span:nth-child(1){color:var(--interest-1-ink);background-color:var(--interest-1-paper)}
 .note-2,#preview-content .tags span:nth-child(2){color:var(--interest-2-ink);background-color:var(--interest-2-paper)}
 .note-3,#preview-content .tags span:nth-child(3){color:var(--interest-3-ink);background-color:var(--interest-3-paper)}

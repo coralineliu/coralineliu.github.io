@@ -44,7 +44,7 @@ async function openPreview(id,trigger) {
   if(id==='quote')content.innerHTML=`<blockquote class="quote-preview"><em>${esc(data.profile.quote)}</em></blockquote>`;
   if(id==='contact')content.innerHTML=`<div class="contact-links"><a href="mailto:${esc(data.profile.email.replace('[at]','@'))}"><span>Email</span><strong>${esc(data.profile.email)}</strong></a><a href="${esc(data.profile.linkedin)}" target="_blank" rel="noopener noreferrer"><span>LinkedIn</span><strong>Yu Liu ↗</strong></a></div>`;
   if(id==='rick'||id==='mood'){
-    const item=id==='rick'?rick:mood;title.textContent=item.title;
+    const item=id==='rick'?rick:mood;title.textContent='Projects';
     content.innerHTML=article(item.title,item.description,id==='mood'?'projects/data-diary-of-mood/detail.png':item.wideImage,item.website)+`<p class="other-works">Projects</p>`+data.projects.filter(p=>p!==item).slice(0,2).map(p=>article(p.title,p.description,p.wideImage,p.website)).join('');
   }
   if(id.startsWith('paper-')){const index=Number(id.slice(-1));title.textContent='Publications';content.innerHTML=[data.publications[index],...data.publications.filter((_,i)=>i!==index)].map(p=>article(p.title,p.authors+' · '+p.venue+(p.award?' · '+p.award:''),p.thumbnail,p.links.paper||p.links.poster)).join('');}
